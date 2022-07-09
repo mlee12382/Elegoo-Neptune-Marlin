@@ -56,19 +56,20 @@ NOTE: I recommend you use an sd card 8GB or less Formatted as FAT32 for installi
 1. If you have tuned your printer (especially e-steps), I highly recommend you connect and run an M503 and record your values. This process will erase any values changed from a stock install. 
 2. [Download the latest version here](https://github.com/just-trey/Marlin/releases/latest/download/Neptune-2.zip).
 3. Extract the zip file on your computer
-4. Copy the desired `elegoo.bin` configuration to your SD Card. No other files are needed to install. 
+4. Copy the desired `elegoo.bin` configuration to your SD Card. No other files are needed to install, with the exception of using the LVGL firmware in which case you will also need the 'assets' folder with the 140 .bin files inside. 
    
    ***NOTE:*** **IT IS IMPORTANT YOU KNOW THE VERSION OF THE ZNP ROBIN NANO BOARD YOU HAVE, AND YOU NEED TO USE THAT VERSION OF THE FIRMWARE**
   
-   - The directory structure is as follows: 
+   - The directory structure is as follows though slightly modified since there are now more options: 
      
      ![dir structure](https://user-images.githubusercontent.com/10281380/148702987-9dd38cbb-fac2-4b16-aa44-5f9b72192f2a.jpg)
 
-   - All firmware and configurations for 1.2 boards are in the 1.2 directory
-   - All firmware and configurations for 1.3 boards are in the 1.3 directory
-   - All firmware and configurations for the 2S are in the 1.3 directory
+   - All firmware and configurations for v1.2 boards are in the v1.2 directorys
+   - All firmware and configurations for v1.3 boards are in the v1.3 directorys
+   - All firmware and configurations for the 2S are in the v1.3 directorys
    - If you *DO NOT* have a BLTOUCH, use the file in the STOCK directory
    - If you *DO* have a BLTOUCH, use the file in the BLTOUCH directory
+   - If you are using WIFI use the corresponding directory from the LVGL_UI folder with the WIFI tag, ie. LVGL_UI\v1.3\2S\BLTouch_WIFI\ in the case of a 2S with BLTouch and Wifi.
    - Neptune 2D versions are available with STOCK and BLTOUCH support following the same structure
 
 ## Install
@@ -135,8 +136,11 @@ Q: How do I know what version board I have?
 A: There are two ways to identify what version board you have. 
   - Via the stock firmware interface:
     - From the main screen, click on * Settings -> About *
-    - If the *Firmware* version is 1.x.x, you have a 1.2 board.
-    - If the *Firmware* version is 2.x.x, you have a 1.3 board.
+    - If the *Firmware* version is 1.x.x, you have a v1.2 board.
+    - If the *Firmware* version is 2.x.x, you have a v1.3 board.
+  - Via the Serial number:
+    - If the last block of the serial number starts with an A you have a v1.2 board
+    - If the last block of the serial number starts with an X you have a v1.3 board
   - Visual confirmation (more effort, but if you are not running stock firmware, the only way):    
   - Power off, unplug and remove the bottom plate cover from your machine (Note: One screw that attaches near the LCD is shorter than the rest. Be sure to put that screw back in the same place when you put it back together, or you can crack or put a dimple on the top of the case) 
   - The version number is printed directly on the board
