@@ -79,11 +79,13 @@
  */
 
 // MAIN CONFIGURATION SWITCHES FOR FEATURES - see readme.md for more details.
-
-#define IS_BOARD_1_3              // uncomment if you have the 1.3 board, commented out for 1.2 board
+// ctrl+/ with your cursor on a line will comment / uncomment that line.
+// #define IS_BOARD_1_3              // uncomment if you have the 1.3 board, commented out for 1.2 board Be sure to change default_envs in PlatformIO.ini
 #define HAS_BLTOUCH               // uncomment if you have a BLTouch or clone
-// #define IS_2D                    // uncomment if you have a Neptune 2D (Dual extruder)
-#define IS_2S					           // uncomment if you have a Neptune 2S (Always a 1.3 board) //mlee12382
+// #define IS_2D                     // uncomment if you have a Neptune 2D (Dual extruder)
+// #define IS_2S					           // uncomment if you have a Neptune 2S (Always a 1.3 board) //mlee12382
+// #define HAS_WIFI                  // uncomment if you have WIFI works with LVGL only NOT ColorUI //mlee12382
+// #define IS_COLORUI                // uncomment if you want to use ColorUI which has more settings available from the touch screen but no WIFI or Thumbnail support  //mlee12382
 
 // Define missing pins
 #define MT_DET_PIN_STATE        LOW
@@ -1644,8 +1646,11 @@
   #define FIL_RUNOUT_ENABLED_DEFAULT true // Enable the sensor on startup. Override with M412 followed by M500.
 #if ENABLED(IS_2D)
   #define NUM_RUNOUT_SENSORS   2
+  #define FIL_RUNOUT_PIN PA4
+  #define FIL_RUNOUT2_PIN PE6
 #else  
   #define NUM_RUNOUT_SENSORS   1          // Number of sensors, up to one per extruder. Define a FIL_RUNOUT#_PIN for each.
+  #define FIL_RUNOUT_PIN PA4
 #endif  
 
   #define FIL_RUNOUT_STATE     LOW        // Pin state indicating that filament is NOT present.
@@ -1879,7 +1884,9 @@
  * Add a bed leveling sub-menu for ABL or MBL.
  * Include a guided procedure if manual probing is enabled.
  */
-#define LCD_BED_LEVELING
+#if ENABLED(IS_COLORUI)
+  #define LCD_BED_LEVELING
+#endif
 
 #if ENABLED(LCD_BED_LEVELING)
   #define MESH_EDIT_Z_STEP  0.025 // (mm) Step size while manually probing Z axis.
@@ -2971,11 +2978,14 @@
  *   root of your SD card, together with the compiled firmware.
  */
 //#define TFT_CLASSIC_UI
-#define TFT_COLOR_UI //just-trey
-//#define TFT_LVGL_UI
+#if ENABLED(IS_COLORUI)
+  #define TFT_COLOR_UI
+#else  
+  #define TFT_LVGL_UI
+#endif
 
-#if ENABLED(TFT_LVGL_UI)
-  //#define MKS_WIFI_MODULE  // MKS WiFi module
+#if BOTH(TFT_LVGL_UI, HAS_WIFI)
+  #define MKS_WIFI_MODULE  // MKS WiFi module
 #endif
 
 /**
