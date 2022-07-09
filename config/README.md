@@ -39,11 +39,13 @@ BLTouch versions also include:
 
 # Do I lose any features if I use this?
 
-The following items are not supported:
+The following items are not supported with ColorUI:
 
 1. If you have a WIFI Card, it WILL NOT WORK (MKS made that call, not me) 
 2. Power loss detection does not work (MKS made that call, not me) 
-3. Icon previews do not exist in UI (Feature not available in the stock marlin color UI)
+3. Icon Previews do not exist in UI (Feature not available in the stock marlin color UI)
+
+If you use LVGL versions of the firmware you will have fewer advanced features available from the touchscreen but you will retain WIFI add-on compatibility and Icon Previews.
 
 # Setup and install
 
