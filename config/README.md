@@ -6,7 +6,7 @@ I take NO responsibility and liability for how you choose to use any of the sour
 
 These configurations have been ported from Trey Wentz 2.0.93 firmware and updated to the current version of Marlin. Original files can be found [here:](https://github.com/just-trey/Marlin/tree/elegoo-neptune-2/). 
 
-# Marlin 2.1.1 - Color UI - 3D Printer Firmware compiled for Elegoo Neptune 2
+# Marlin 2.1.1 - Color UI and LVGL UI - 3D Printer Firmware compiled for Elegoo Neptune 2 / 2S /2D
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
