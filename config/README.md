@@ -45,7 +45,7 @@ The following items are not supported with ColorUI:
 2. Power loss detection does not work (MKS made that call, not me) 
 3. Icon Previews do not exist in UI (Feature not available in the stock marlin color UI)
 
-If you use LVGL versions of the firmware you will have fewer advanced features available from the touchscreen but you will retain WIFI add-on compatibility and Icon Previews.
+If you use LVGL versions of the firmware you will have fewer advanced features available from the touchscreen but you will retain WIFI add-on compatibility and Icon Previews. If you choose to use the LVGL firmware you will also need to download the assests folder and include it with the appropriate elegoo.bin file on the sd card when you flash the firmware or you will not have all the icons, etc.
 
 # Setup and install
 
