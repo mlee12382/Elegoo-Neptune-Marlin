@@ -1,4 +1,4 @@
-## NOTE: Precompiled firmware and instructions are in the 'config' folder.
+## NOTE: Precompiled firmware and instructions are in the 'config' folder. LVGL files are for experimentation only, they are not working properly and I am unsure how to fix them or if they can be fixed without neutering functionality so much that you might as well stick with stock firmware. :(
 <p align="center"><img src="buildroot/share/pixmaps/logo/marlin-outrun-nf-500.png" height="250" alt="MarlinFirmware's logo" /></p>
 
 <h1 align="center">Marlin 3D Printer Firmware</h1>
