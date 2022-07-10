@@ -1211,7 +1211,7 @@
  *      - normally-closed switches to GND and D32.
  *      - normally-open switches to 5V and D32.
  */
-#define Z_MIN_PROBE_PIN PC4 // Z-MAX PIN FOR BOARD
+// #define Z_MIN_PROBE_PIN PC4 // Z-MAX PIN FOR BOARD
 
 /**
  * Probe Type
