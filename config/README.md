@@ -45,6 +45,7 @@ The following items are not supported with ColorUI:
 2. Power loss detection does not work (MKS made that call, not me) 
 3. Icon Previews do not exist in UI (Feature not available in the stock marlin color UI)
 
+## NOTE: LVGL seems to be broken and unusable based on feedback I have received so far, I am only leaving the files up in case someone wants to play around with it and try to make it work themselves, I am not recommending it's use at this point in time. :(
 If you use LVGL versions of the firmware you will have fewer advanced features available from the touchscreen but you will retain WIFI add-on compatibility and Icon Previews. If you choose to use the LVGL firmware you will also need to download the assests folder and include it with the appropriate elegoo.bin file on the sd card when you flash the firmware or you will not have all the icons, etc.
 
 # Setup and install
@@ -69,7 +70,7 @@ NOTE: I recommend you use an sd card 8GB or less Formatted as FAT32 for installi
    - All firmware and configurations for the 2S are in the v1.3 directorys
    - If you *DO NOT* have a BLTOUCH, use the file in the STOCK directory
    - If you *DO* have a BLTOUCH, use the file in the BLTOUCH directory
-   - If you are using WIFI use the corresponding directory from the LVGL_UI folder with the WIFI tag, ie. LVGL_UI\v1.3\2S\BLTouch_WIFI\ in the case of a 2S with BLTouch and Wifi.
+   - If you are using WIFI use the corresponding directory from the LVGL_UI folder with the WIFI tag, ie. LVGL_UI\v1.3\2S\BLTouch_WIFI\ in the case of a 2S with BLTouch and Wifi. ## SEE NOTE ABOVE: USE AT YOUR OWN RISK, NOT WORKING PROPERLY
    - Neptune 2D versions are available with STOCK and BLTOUCH support following the same structure
 
 ## Install
