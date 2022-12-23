@@ -617,6 +617,8 @@
   #include "stm32f1/pins_ERYONE_ERY32_MINI.h"   // STM32F103VET6                          env:ERYONE_ERY32_MINI_maple
 #elif MB(PANDA_PI_V29)
   #include "stm32f1/pins_PANDA_PI_V29.h"        // STM32F103RCT6                          env:PANDA_PI_V29
+#elif MB(ZNP_ROBIN_NANO)
+  #include "stm32f1/pins_MKS_ROBIN_NANO.h"      // STM32F1                                env:znp_robin_nano35  
 
 //
 // ARM Cortex-M4F
@@ -717,6 +719,12 @@
   #include "stm32f4/pins_MKS_SKIPR_V1_0.h"      // STM32F4                                env:mks_skipr_v1 env:mks_skipr_v1_nobootloader
 #elif MB(TRONXY_V10)
   #include "stm32f4/pins_TRONXY_V10.h"          // STM32F4                                env:STM32F446_tronxy
+#elif MB(ZNP_NEPTUNE_X)
+  #include "stm32f4/pins_ZNP_NEPTUNE_X.h"       // STM32F4                                env:znp_neptune_x
+#elif MB(ZNP_NEPTUNE_3)
+  #include "stm32f4/pins_ZNP_NEPTUNE_3.h"           // STM32F4                            env:znp_neptune_3
+#elif MB(ZNP_ROBIN_NANO_V1_3)
+  #include "stm32f4/pins_MKS_ROBIN_NANO_V1_3_F4.h" // STM32F4                             env:znp_robin_nano_v1_3    
 
 //
 // ARM Cortex M7
